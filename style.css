@@ -14,3 +14,7 @@ input{
 a {
     color:orange;
 }
+
+iframe{
+    border:0px;
+}

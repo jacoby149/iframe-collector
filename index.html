@@ -6,15 +6,16 @@
     <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#f8f8f8" />
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 
 <body>
     <div>
-        <iframe src="https://jacobhoffman.tk/ThreeJS-Engine/raw_library/examples/webgl_loader_gltf_extensions.html"
-            style="position:fixed;top:0px;" height="200px" width="100%">
+        <iframe id="mainFrame" src="https://jacobhoffman.tk/ThreeJS-Engine/raw_library/examples/webgl_postprocessing_unreal_bloom_selective.html"
+            style="position:fixed;top:-0px;" height="300px" width="100%">
         </iframe>
     </div>
-    <div style="margin:250px"></div>
+    <div style="margin:350px"></div>
     <div style="margin:20px">
         <button>Log In</button>
         <br><br>
@@ -22,13 +23,14 @@
         <br><br>
 
         <div class="slidecontainer">
-            url<br><input type="text"></input>
+            url<br><input value="https://jacobhoffman.tk/ThreeJS-Engine/raw_library/examples/webgl_postprocessing_unreal_bloom_selective.html" oninput="changeURL(this.value)" type="text"></input>
+        
         </div>
         <div class="slidecontainer">
-            iframe height<br><input type="range" min="1" max="360" value="50" class="slider" id="myRange">
+            iframe height<br><input type="range" min="1" max="300" value="300" class="slider" oninput="resize(this.value)" id="myRange">
         </div>
         <div class="slidecontainer">
-            iframe vertical pan<br><input type="range" min="1" max="500" value="50" class="slider" id="myRange">
+            iframe vertical pan<br><input type="range" min="-200" max="200" value="0" oninput="repan(this.value)"class="slider" id="myRange">
         </div>
         <br>
         <button>Add to Bulletin</button>
@@ -37,5 +39,8 @@
         <br><br>
         you can put any url in the above bar!<br>
         psst.... try pasting some of these <a href="https://jacobhoffman.tk/ThreeJS-Engine/"> 3D examples</a>
+        <br> 
+        <br>
+        ill make it even easier... here is one of the examples!<br>https://jacobhoffman.tk/ThreeJS-Engine/raw_library/examples/webgl_marchingcubes.html
     </div>
 </body>
